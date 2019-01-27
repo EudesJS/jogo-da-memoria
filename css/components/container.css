@@ -1,8 +1,0 @@
-.container {
-  width: 375px;
-  height: 812px;
-  display:flex;
-  flex-direction: row-reverse;
-  align-content: space-between;
-  justify-content: space-around;
-}

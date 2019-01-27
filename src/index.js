@@ -1,24 +1,47 @@
 const $root = document.querySelector("#root");
-const $memoryCard = document.createElement("article");
-const $memoryCardJava = document.createElement("article");
-const $icon = `<img 
+
+memoryCardFrontElement();
+memoryCardCollabElement();
+memoryCardCollabElement();
+memoryCardCollabElement();
+memoryCardCollabElement();
+memoryCardCollabElement();
+memoryCardCollabElement();
+memoryCardCollabElement();
+memoryCardCollabElement();
+memoryCardCollabElement();
+
+function memoryCardCollabElement(){
+  const $memoryCard = document.createElement("article");
+  const $iconCollab = `<img 
         src='img/icon-collabcode.png' 
         alt='Gueio mascote da Collabcode' 
         class='icon'
         >`;
-const $iconJava = `<section class='ball'>
+
+  $memoryCard.classList.add("memory-card");
+  $root.insertBefore($memoryCard, null);
+
+  $memoryCard.insertAdjacentHTML("afterbegin", $iconCollab);  
+  
+}
+
+function memoryCardFrontElement() {
+  const $memoryCardFront = document.createElement("article");
+
+  const $iconJava = `
         <img 
         src='img/icon-java.png' 
         alt='Ícone livro Java' 
         class='icon'
         >
-        </section>`;
+        `;
 
-$memoryCard.classList.add("memory-card");
-$memoryCardJava.classList.add("javabook-card");
+  $memoryCardFront.classList.add("memory-card");
+  $memoryCardFront.classList.add("-front");
+  $root.insertBefore($memoryCardFront,null);
 
-$root.insertBefore($memoryCard, null);
-$root.insertBefore($memoryCardJava, null);
-$memoryCard.insertAdjacentHTML("afterbegin", $icon);
-$memoryCardJava.insertAdjacentHTML("afterbegin", $iconJava);
+  $memoryCardFront.insertAdjacentHTML("afterbegin", $iconJava);
+
+}
 

@@ -1,17 +1,12 @@
 const $root = document.querySelector(".container");
 
 memoryCardFrontElement();
-memoryCardCollabElement();
-memoryCardCollabElement();
-memoryCardCollabElement();
-memoryCardCollabElement();
-memoryCardCollabElement();
-memoryCardCollabElement();
-memoryCardCollabElement();
-memoryCardCollabElement();
-memoryCardCollabElement();
 
-function memoryCardCollabElement(){
+for(let iconCollab = 1; iconCollab < 10; iconCollab++){
+  memoryCardCollabElement();
+}
+
+function memoryCardCollabElement() {
   const $memoryCard = document.createElement("article");
   const $iconCollab = `<img 
         src='img/icon-collabcode.png' 

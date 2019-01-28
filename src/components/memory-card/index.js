@@ -1,11 +1,3 @@
-const $root = document.querySelector(".container");
-
-memoryCardFrontElement();
-
-for(let iconCollab = 1; iconCollab < 10; iconCollab++){
-  memoryCardCollabElement();
-}
-
 function memoryCardCollabElement() {
   const $memoryCard = document.createElement("article");
   const $iconCollab = `<img 
@@ -15,9 +7,14 @@ function memoryCardCollabElement() {
         >`;
 
   $memoryCard.classList.add("memory-card");
-  $root.insertBefore($memoryCard, null);
+  $wrapCards.insertBefore($memoryCard, null);
 
-  $memoryCard.insertAdjacentHTML("afterbegin", $iconCollab);  
+  $memoryCard.insertAdjacentHTML("afterbegin", $iconCollab); 
+  
+  const $getMemoryCard = document.querySelector("article");
+  $memoryCard.addEventListener('click', function(){
+    console.log("oi");
+  });
   
 }
 
@@ -34,9 +31,13 @@ function memoryCardFrontElement() {
 
   $memoryCardFront.classList.add("memory-card");
   $memoryCardFront.classList.add("-front");
-  $root.insertBefore($memoryCardFront,null);
+  $wrapCards.insertBefore($memoryCardFront,null);
 
   $memoryCardFront.insertAdjacentHTML("afterbegin", $iconJava);
 
+  const $getMemoryCardFront = document.querySelector("article");
+  $memoryCardFront.addEventListener('click', function(){
+    console.log("oi");
+  });
 }
 

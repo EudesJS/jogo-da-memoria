@@ -1,12 +1,22 @@
+const $root = document.querySelector("#root");
 
-for(iconJava = 1; iconJava < 3; iconJava++){
-  memoryCardFrontElement();
-}
+const $cardsWrapper = createCardsWrapper();
+const $memoryCard = memoryCardCollabElement();
+const $memoryCardFront = memoryCardFrontElement();
 
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardFront);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardFront);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard);
+$cardsWrapper.insertAdjacentHTML("beforeend", $memoryCard);
 
-for(let iconCollab = 2; iconCollab < 10; iconCollab++){
-  memoryCardCollabElement();
-}
+$root.insertAdjacentElement("beforeend", $cardsWrapper);
+
 
 
 

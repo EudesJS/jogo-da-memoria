@@ -2,7 +2,7 @@ const $root = document.querySelector("#root");
 
 const $cardsWrapper = createCardsWrapper();
 const $memoryCard = memoryCardCollabElement();
-const $memoryCardFront = memoryCardFrontElement();
+const $memoryCardFront = memoryCardCollabElement("-front");
 
 $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardFront);
 $cardsWrapper.insertAdjacentHTML("beforeend", $memoryCardFront);

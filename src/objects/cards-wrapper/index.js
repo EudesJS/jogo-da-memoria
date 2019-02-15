@@ -10,13 +10,15 @@ function createCardsWrapper() {
     display:flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    width:100vw;
   }
   
   .cards-wrapper > .memory-card {
     margin: 10px;
-  }`
+ }`
   $head.insertBefore($style,null);
   
   return $cardsWrapper;
 
 }
+
